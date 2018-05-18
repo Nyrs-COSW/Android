@@ -1,0 +1,10 @@
+insert into nurse_nursing_services values
+	('maria.obando','Terapia'),
+	('LeonardoCastro','Transplantes'),
+	('JoseEnfermero','Paliativos'),
+	('JairoGonzales','Maternidad'),
+	('david.galvis','Adulto-Mayor'),
+	('daniel.ayala','Post-Operatorio'),
+	('carmen.villalobos','Adulto-Mayor'),
+	('camila.gomez','Terapia')
+;

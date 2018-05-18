@@ -1,0 +1,9 @@
+insert into nursing_services values
+	('Transplantes','Cuidados especiales luego de un transplante','/assets/images/heart.svg'),
+	('Terapia','Terapia de recuperacion luego de accidentes o lesiones deportivas.','/assets/images/massage.svg'),
+	('Post-Operatorio','Apoyo y cuidados luego de diferentes tipos de cirugias.','/assets/images/posoperatorio.svg'),
+	('Paliativos','Alivia y previene sufrimientos para darmejor calidad de vida, a pacientes con enfermedades graves.','/assets/images/doctor.svg'),
+	('Maternidad','Soporte, cuidados y asesorias especiales en madres y bebes recien nacidos y edades tempranas.','/assets/images/mother.svg'),
+	('Compra-de-Equipos','Venda de suministros y equipos medicos, para todo tipo de necesidades','/assets/images/medicine.svg'),
+	('Adulto-Mayor','Cuidados especializados en adultos mayores, y sus diferentes necesidades.','/assets/images/grandfather.svg')
+;
