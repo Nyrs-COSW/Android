@@ -1,3 +1,18 @@
 <resources>
   <string name="app_name">NYRS</string>
+  <string name="username_text">Usuario</string>
+  <string name="password_text">Contraseña</string>
+  <string name="signin_text">Inicia</string>
+  <string name="signup_text">Registrate</string>
+  <string name="or_text">ó</string>
+  <string name="permission">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+  <string name="error_invalid_username">This username is invalid</string>
+  <string name="error_invalid_password">This password is too short</string>
+  <string name="error_incorrect_password">This password is incorrect</string>
+  <string name="error_field_required">This field is required</string>
+  <string name="shared_preferences">Shared_preferences</string>
+  <string name="saved_access_token">Saved_token</string>
+  <string name="saved_username">Username</string>
 </resources>
