@@ -40,8 +40,9 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         User users = userByServiceList.get(position);
-        holder.name.setText(users.getFirstname());
+        holder.name.setText(users.getFirstname()+" "+users.getLastname());
         holder.emailText.setText(users.getEmail());
+        holder.ageText.setText(String.format("%d",users.getAge()));
     }
 
 
@@ -54,10 +55,12 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView emailText;
+        TextView ageText;
         Button name;
 
         public ViewHolder(View view) {
             super(view);
+            ageText = view.findViewById(R.id.userAge);
             name = view.findViewById(R.id.nameUser);
             emailText = view.findViewById(R.id.emailUser);
             name.setOnClickListener(new View.OnClickListener() {

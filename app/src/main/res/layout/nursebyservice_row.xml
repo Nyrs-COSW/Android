@@ -45,20 +45,52 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:visibility="visible"
-                    tools:text="Borrusia Dortmund" />
+                    tools:text="Enfermero" />
 
                 <TextView
-                    android:id="@+id/emailUser"
+                    android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignLeft="@+id/nameUser"
                     android:layout_alignStart="@+id/nameUser"
                     android:layout_below="@+id/nameUser"
-                    android:layout_marginLeft="11dp"
-                    android:layout_marginStart="11dp"
                     android:textColor="@android:color/black"
                     android:textSize="14sp"
-                    tools:text="Borrusia Dortmund" />
+                    tools:text="Email: " />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView2"
+                    android:layout_alignStart="@+id/textView2"
+                    android:layout_below="@+id/textView2"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    tools:text="Edad: " />
+
+                <TextView
+                    android:id="@+id/emailUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nameUser"
+                    android:layout_toEndOf="@+id/textView2"
+                    android:layout_toRightOf="@+id/textView2"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    tools:text="email" />
+
+                <TextView
+                    android:id="@+id/userAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView"
+                    android:layout_alignBottom="@+id/textView"
+                    android:layout_toEndOf="@+id/textView"
+                    android:layout_toRightOf="@+id/textView"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    tools:text="age" />
 
             </RelativeLayout>
         </RelativeLayout>
