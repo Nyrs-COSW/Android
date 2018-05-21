@@ -22,5 +22,6 @@
 
   <string name="title_category">Categorias</string>
   <string name="title_userlist">Enfermero/as disponibles</string>
+  <string name="title_profileview">Perfil</string>
 
 </resources>
