@@ -7,6 +7,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import co.edu.pdam.eci.persistenceapiintegration.data.entity.NursingServices;
+import co.edu.pdam.eci.persistenceapiintegration.data.entity.User;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -62,6 +63,18 @@ public class RetrofitNetwork implements Network {
         try {
             Call<List<NursingServices>> call = nursingServices.getNursingServicesList();
             Response<List<NursingServices>> execute = call.execute();
+            requestCallback.onSuccess( execute.body() );
+        }
+        catch ( IOException e ) {
+            requestCallback.onFailed( new NetworkException( null, e ) );
+        }
+    }
+
+    @Override
+    public void getNursesByService( String service, RequestCallback<List<User>> requestCallback ){
+        try {
+            Call<List<User>> call = userService.getNurseByService(service);
+            Response<List<User>> execute = call.execute();
             requestCallback.onSuccess( execute.body() );
         }
         catch ( IOException e ) {

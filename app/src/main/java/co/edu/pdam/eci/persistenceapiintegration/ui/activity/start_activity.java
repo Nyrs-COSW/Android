@@ -77,18 +77,7 @@ public class start_activity extends AppCompatActivity {
             });
         }
     }
-    public void ListNurse(){
-        Button lista;
-        lista = findViewById(R.id.name);
-        lista.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent lista = new Intent(start_activity.this, ListNurse.class);
-                startActivity(lista);
-            }
-        });
 
-    }
 
 
 }

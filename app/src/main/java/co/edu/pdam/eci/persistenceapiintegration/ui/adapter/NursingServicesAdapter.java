@@ -2,21 +2,18 @@ package co.edu.pdam.eci.persistenceapiintegration.ui.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.app.Activity;
 
 import java.util.List;
 
 import co.edu.pdam.eci.persistenceapiintegration.R;
 import co.edu.pdam.eci.persistenceapiintegration.data.entity.NursingServices;
 import co.edu.pdam.eci.persistenceapiintegration.ui.activity.ListNurse;
-import co.edu.pdam.eci.persistenceapiintegration.ui.activity.start_activity;
 
 
 public class NursingServicesAdapter extends RecyclerView.Adapter<NursingServicesAdapter.ViewHolder> {
@@ -32,7 +29,7 @@ public class NursingServicesAdapter extends RecyclerView.Adapter<NursingServices
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         context = parent.getContext();
-        View view = LayoutInflater.from(context).inflate(R.layout.team_row, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.nursingservices_row, parent, false);
         return new ViewHolder(view);
 
     }
@@ -63,6 +60,7 @@ public class NursingServicesAdapter extends RecyclerView.Adapter<NursingServices
                 @Override
                 public void onClick(View view) {
                     Intent lista = new Intent(view.getContext(), ListNurse.class);
+                    lista.putExtra("servicio", name.getText());
                     context.startActivity(lista);
                 }
             });
