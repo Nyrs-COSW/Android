@@ -23,6 +23,9 @@
             android:label="Inicio" />
         <activity android:name=".ui.activity.ListNurse" />
         <activity android:name=".ui.activity.SignUpActivity"></activity>
+        <activity android:name=".ui.activity.ProfileUserActivity"></activity>
+
+
     </application>
 
 </manifest>

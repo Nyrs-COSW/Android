@@ -14,6 +14,7 @@ import java.util.List;
 import co.edu.pdam.eci.persistenceapiintegration.R;
 import co.edu.pdam.eci.persistenceapiintegration.data.entity.User;
 import co.edu.pdam.eci.persistenceapiintegration.ui.activity.ListNurse;
+import co.edu.pdam.eci.persistenceapiintegration.ui.activity.ProfileUserActivity;
 
 /**
  * Created by 2101751 on 5/21/18.
@@ -26,7 +27,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     public UserAdapter(List<User> response) {
         this.userByServiceList = response;
-
     }
 
     @Override
@@ -66,8 +66,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
             name.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent lista = new Intent(view.getContext(), ListNurse.class);
-                    context.startActivity(lista);
+                    Intent intentProfile = new Intent(view.getContext(), ProfileUserActivity.class);
+                    context.startActivity(intentProfile);
                 }
             });
         }
