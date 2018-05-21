@@ -112,10 +112,15 @@ public class SigninActivity extends AppCompatActivity {
     private void openSignUpForm() {
         //create the intent
         //login for the first time
-        Intent intent = new Intent(this, SignUpActivity.class);
-        //Start the new activity using the intent.
-        startActivity(intent);
-        //delete the current activity from the stack
+
+        Button singup = findViewById(R.id.signUpButton);
+        singup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(activity , SignUpActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

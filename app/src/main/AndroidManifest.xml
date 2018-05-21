@@ -21,7 +21,8 @@
         <activity
             android:name=".ui.activity.start_activity"
             android:label="Inicio" />
-        <activity android:name=".ui.activity.ListNurse"></activity>
+        <activity android:name=".ui.activity.ListNurse" />
+        <activity android:name=".ui.activity.SignUpActivity"></activity>
     </application>
 
 </manifest>
