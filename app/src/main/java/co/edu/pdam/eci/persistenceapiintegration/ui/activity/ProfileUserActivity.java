@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.TextView;
 
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -23,12 +25,51 @@ import co.edu.pdam.eci.persistenceapiintegration.ui.adapter.UserAdapter;
 public class ProfileUserActivity  extends AppCompatActivity {
 
     private RecyclerView recyclerView;
+    private TextView textName;
+    private TextView textEmail;
+    private TextView textAge;
+    private TextView textUsername;
+    private TextView textServices;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_user_view);
-        System.out.println("ENTRO A LISTnURSE");}}/*
+        System.out.println("ENTRO A LISTnURSE");
+        String name = (String) getIntent().getSerializableExtra("nameProfile");
+        String email = (String) getIntent().getSerializableExtra("emailProfile");
+        Integer age = (Integer) getIntent().getSerializableExtra("ageProfile");
+        String username = (String) getIntent().getSerializableExtra("usernameProfile");
+
+
+        Integer sizeNS = (Integer) getIntent().getSerializableExtra("sizeNursinServicesProfile");
+        String services="";
+
+        for (int i = 0; i < sizeNS; i++) {
+            if(i == sizeNS-1){
+                services = services+(String) getIntent().getSerializableExtra("service"+i)+".";
+            }
+            else{
+                services = services+(String) getIntent().getSerializableExtra("service"+i)+", ";
+            }
+        }
+
+        textName = (TextView) findViewById(R.id.profileName);
+        textEmail = (TextView) findViewById(R.id.profileuserEmail);
+        textAge = (TextView) findViewById(R.id.profileuserAge);
+        textUsername = (TextView) findViewById(R.id.profileuserName);
+        textServices = (TextView) findViewById(R.id.profileServices);
+
+
+        textName.setText("Nombre: "+name);
+        textEmail.setText("Email: "+email);
+        textAge.setText("Edad: "+String.format("%d",age));
+        textUsername.setText("Username: "+username);
+        textServices.setText("Servicios: "+services);
+    }
+
+
+}/*
         recyclerView = findViewById( R.id.recyclerViewProfile );
         configureRecyclerView();
         ConectToApiNetwork ca = new ConectToApiNetwork();
