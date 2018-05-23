@@ -1,24 +1,36 @@
 package co.edu.pdam.eci.persistenceapiintegration.data.entity;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+
 import java.util.List;
 
 /**
  * Created by 2090540 on 5/18/18.
  */
 
-public class User {
+@DatabaseTable
+public class User extends BaseEntity{
 
 
 
-
+    @DatabaseField(columnName = "age")
     private int age;
+    @DatabaseField(columnName = "experience")
     private List<Experience> experience;
+    @DatabaseField(columnName = "role")
     private String role = "";
+    @DatabaseField(columnName = "email")
     private String email;
+    @DatabaseField(columnName = "password")
     private String password;
+    @DatabaseField(columnName = "firstname")
     private String firstname;
+    @DatabaseField(columnName = "lastname")
     private String lastname;
+    @DatabaseField(columnName = "username")
     private String username;
+    @DatabaseField(columnName = "services")
     private List<NursingServices> services;
     public User()
     {
@@ -26,7 +38,7 @@ public class User {
     public User( int age, String email, String password, String firstname, String lastname, String username) {
 
         this.age = age;
-        this.role = "pacient";
+        this.role = "patient";
         this.email = email;
         this.password = password;
         this.firstname = firstname;

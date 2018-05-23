@@ -18,6 +18,8 @@ public interface Network {
 
     void getNursesByService(String service, RequestCallback<List<User>> requestCallback);
 
+    void newPatient(User patient, RequestCallback<User> requestCallback);
+
 
 
 

@@ -82,9 +82,22 @@ public class RetrofitNetwork implements Network {
         }
     }
 
+    @Override
+    public void newPatient(User patient, RequestCallback<User> requestCallback) {
+        try{
+
+            Call<User> call= userService.newPatient(patient);
+            Response<User> execute = call.execute();
+            requestCallback.onSuccess( execute.body() );
 
 
-    public void addSecureTokenInterceptor( final String token )
+        } catch (IOException e) {
+            requestCallback.onFailed( new NetworkException( null, e ) );
+        }
+
+    }
+
+    public void addSecureTokenInterceptor(final String token )
     {
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
         httpClient.addInterceptor( new Interceptor()

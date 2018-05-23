@@ -2,7 +2,6 @@ package co.edu.pdam.eci.persistenceapiintegration.services;
 
 import java.util.List;
 
-import co.edu.pdam.eci.persistenceapiintegration.data.entity.NursingServices;
 import co.edu.pdam.eci.persistenceapiintegration.data.entity.User;
 import co.edu.pdam.eci.persistenceapiintegration.network.LoginWrapper;
 import co.edu.pdam.eci.persistenceapiintegration.network.Token;
@@ -23,5 +22,8 @@ public interface UserService {
 
     @GET( "user/personal/{service}" )
     Call<List<User>> getNurseByService(@Path("service") String service );
+
+    @POST("user/patient")
+    Call<User> newPatient(@Body User patient);
 
 }
